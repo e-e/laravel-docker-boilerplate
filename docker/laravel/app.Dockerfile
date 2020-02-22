@@ -16,4 +16,6 @@ RUN apt-get update && apt-get install -y wget \
 
 WORKDIR /var/www/html
 
+RUN a2enmod rewrite
+
 VOLUME ./000-default.conf:/etc/apache2/sites-available/000-default.conf
